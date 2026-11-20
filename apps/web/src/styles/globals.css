@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-50: #eef2ff;
+  --brand-100: #e0e7ff;
+  --brand-500: #6366f1;
+  --brand-600: #4f46e5;
+  --brand-700: #4338ca;
+  --brand-900: #312e81;
+
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --info: #2563eb;
+}
+
+html {
+  font-family: 'Cairo', 'Tajawal', system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Tabular numerals for prices and quantities */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Print styles */
+@media print {
+  @page {
+    size: 80mm auto;
+    margin: 0;
+  }
+  body * {
+    visibility: hidden;
+  }
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+  .print-area {
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0;
+    width: 72mm;
+  }
+}

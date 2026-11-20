@@ -1,0 +1,22 @@
+{
+  "name": "desktop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "tsx src/main.ts",
+    "build": "tsc --project tsconfig.json",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "test": "echo 'No desktop tests yet (Phase 1)'"
+  },
+  "dependencies": {
+    "electron": "33.3.1"
+  },
+  "devDependencies": {
+    "typescript": "5.7.2",
+    "tsx": "4.19.2",
+    "electron-builder": "25.1.8"
+  }
+}

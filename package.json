@@ -1,0 +1,28 @@
+{
+  "name": "stationery-pos",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "build": "pnpm -r build",
+    "verify": "pnpm lint && pnpm typecheck && pnpm test && pnpm build",
+    "dev:server": "pnpm --filter server dev",
+    "dev:web": "pnpm --filter web dev",
+    "dev:desktop": "pnpm --filter desktop dev"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.1",
+    "typescript": "5.7.2",
+    "eslint": "9.16.0",
+    "prettier": "3.4.2",
+    "@typescript-eslint/eslint-plugin": "8.17.0",
+    "@typescript-eslint/parser": "8.17.0",
+    "eslint-plugin-import-x": "4.5.0"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=9.0.0"
+  }
+}

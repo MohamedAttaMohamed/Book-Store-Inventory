@@ -1,0 +1,19 @@
+// Minimal Prisma schema for Phase 1 — will be extended in Phase 2 with full domain schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Minimal health-check model; full schema added in Phase 2
+model AppSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
