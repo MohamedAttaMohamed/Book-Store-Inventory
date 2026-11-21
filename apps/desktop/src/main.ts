@@ -81,7 +81,7 @@ function startServer(): void {
 
   serverProcess.on('exit', (code) => {
     if (code !== 0 && code !== null) {
-      void dialog.showErrorBox(
+      dialog.showErrorBox(
         'Server Error',
         `The backend server exited unexpectedly (code ${code}). The app will close.`,
       );
@@ -134,7 +134,7 @@ void app.whenReady().then(async () => {
     await waitForHealth();
     createWindow();
   } catch (err) {
-    void dialog.showErrorBox(
+    dialog.showErrorBox(
       'Startup Error',
       `Could not start the application: ${err instanceof Error ? err.message : String(err)}`,
     );

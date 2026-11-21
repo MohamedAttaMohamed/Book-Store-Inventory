@@ -5,7 +5,9 @@ describe('GET /api/v1/health', () => {
   let app: Awaited<ReturnType<typeof buildApp>>;
 
   afterAll(async () => {
-    if (app) await app.close();
+    if (app as unknown) {
+      await app.close();
+    }
   });
 
   it('returns 200 with status ok', async () => {
