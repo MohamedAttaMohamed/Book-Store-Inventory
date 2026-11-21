@@ -37,6 +37,9 @@ jobs:
       - name: Generate Prisma client
         run: pnpm --filter server exec prisma generate
 
+      - name: Build Shared Types
+        run: pnpm --filter @stationery-pos/shared build
+
       - name: Run Tests
         run: pnpm -r test
 
@@ -45,7 +48,6 @@ jobs:
 
       - name: Build Web & Server
         run: |
-          pnpm --filter @stationery-pos/shared build
           pnpm --filter server build
           pnpm --filter web build
 
